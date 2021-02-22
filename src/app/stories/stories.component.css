@@ -1,0 +1,56 @@
+.containerCss{
+  height: 30px;
+}
+.storiesCss{
+  height: 80px;
+}
+.storiesCss1{
+  height: 60px;
+}
+
+
+.avatar-group .avatar {
+  position: relative;
+  z-index: 2;
+  border: 2px solid #fff;
+}
+.avatar {
+  font-size: 1rem;
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+  border-radius: .375rem;
+  background-color: #adb5bd;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.cover-container {
+  height: 90px;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.cover-item {
+  position: relative;
+  display: inline-block;
+  margin: 8px 8px;
+  box-shadow: 2px 2px 4px #bbb;
+  border-top-right-radius: 4px;
+  width: 50px;
+  height: 50px;
+  vertical-align: bottom;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.iconCss{
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  color: white;
+}
