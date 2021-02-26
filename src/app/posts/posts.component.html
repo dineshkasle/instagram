@@ -1,50 +1,26 @@
 <app-stories></app-stories>
 <hr class="hrCss">
 <div class="bg-dark">
- <div>
-   <div class="pl-2">
-     <img class="cover-item" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" style="border-radius: 50%;width: 35px;height: 35px;" alt="">
-     <small class="text-white mt-2" style="position: absolute;font-size: 11px;">Dinesh Kasale</small>
-     <small  class="text-white" style="position: absolute; top: 174px; font-size: 16px; color: #d2cfcf !important;left: 290px;"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-     </small>
-     <small class="text-white" style="position: absolute;top: 192px;font-size: 11px;color: #d2cfcf !important;">Mumbai, India</small>
-   </div>
-   <div>
-     <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" alt="" style="width: -moz-available;width: -webkit-fill-available">
-   </div>
-   <div>
-
-     <div class="">
-
-       <i class="fa fa-heart-o text-white ml-2"></i>
-
-       <i class="fa fa-comment-o text-white ml-2"></i>
-
-       <i class="fa fa-paper-plane-o text-white ml-2"></i>
-       <i class="fa fa-bookmark-o text-white ml-2 pull-right mr-3 mt-1"></i>
-
-     </div>
-     <div>
-       <small class="text-white pl-2"> 1,823 likes</small>
-     </div>
-   </div>
- </div>
-  <div>
+  <div *ngFor="let post of myPost; let i=index" style="position: relative">
     <div class="pl-2">
-      <img class="cover-item" src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg" style="border-radius: 50%;width: 35px;height: 35px;" alt="">
-      <small class="text-white mt-2" style="position: absolute;font-size: 11px;">Danny123 Kasale</small>
-      <small  class="text-white" style="position: absolute; top: 174px; font-size: 16px; color: #d2cfcf !important;left: 290px;"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+      <img class="cover-item" [src]="post.imgUri"
+           style="border-radius: 50%;width: 35px;height: 35px;" alt="">
+      <small class="text-white mt-2" style="position: absolute;font-size: 11px;"> {{ post.userName}}</small>
+      <small class="text-white"
+             style="position: absolute; top: 5px; font-size: 16px; color: #d2cfcf !important;left: 290px;"><i
+        class="fa fa-ellipsis-h fa-rotate-90" aria-hidden="true"></i>
       </small>
-      <small class="text-white" style="position: absolute;top: 192px;font-size: 11px;color: #d2cfcf !important;">Mumbai, India</small>
+      <small class="text-white" style="position: absolute;top: 22px;font-size: 11px;color: #d2cfcf !important;">{{post.location}}</small>
     </div>
     <div>
-      <img src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg" alt="" style="width: 100%">
+      <img [src]="post.mainImgUrl" alt="" (dblclick)="likePost(i)"
+           style="width: -moz-available;width: -webkit-fill-available">
     </div>
     <div>
 
       <div class="">
 
-        <i class="fa fa-heart-o text-white ml-2"></i>
+        <i class="text-white ml-2" [ngClass]="post.likeClass" (click)="likedPost(i)"></i>
 
         <i class="fa fa-comment-o text-white ml-2"></i>
 
@@ -53,7 +29,7 @@
 
       </div>
       <div>
-        <small class="text-white pl-2"> 1,823 likes</small>
+        <small class="text-white pl-2"> {{post.likes}} likes</small>
       </div>
     </div>
   </div>
