@@ -18,3 +18,13 @@
 .red{
   color: red !important;
 }
+.imgDim{
+  width: 270px;
+  height: 270px;
+}
+.doubleClick{
+  touch-action: manipulation;
+}
+.imgShadow{
+  text-shadow: 3px 6px #bfbfbf;
+}

@@ -19,7 +19,8 @@ export class PostsComponent implements OnInit {
       location: 'Mumbai, India',
       mainImgUrl: 'https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg',
       likes: 1823,
-      likeClass:'fa fa-heart-o '
+      likeClass:'fa fa-heart-o ',
+      likedImage:false
     },
       {
         imgUri: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg",
@@ -27,11 +28,16 @@ export class PostsComponent implements OnInit {
         location: 'Delhi, India',
         mainImgUrl: 'https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg',
         likes: 2500,
-        likeClass:'fa fa-heart-o '
+        likeClass:'fa fa-heart-o ',
+        likedImage:false
       }];
   }
 
   likePost(index){
+    this.myPost[index].likedImage = true;
+    setTimeout( ()=>{
+      this.myPost[index].likedImage = false;
+    },1000);
     if(this.myPost[index].likeClass === 'fa fa-heart-o '){
       this.myPost[index].likeClass = 'fa fa-heart red';
     }else {

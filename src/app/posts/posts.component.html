@@ -10,10 +10,16 @@
              style="position: absolute; top: 5px; font-size: 16px; color: #d2cfcf !important;left: 290px;"><i
         class="fa fa-ellipsis-h fa-rotate-90" aria-hidden="true"></i>
       </small>
-      <small class="text-white" style="position: absolute;top: 22px;font-size: 11px;color: #d2cfcf !important;">{{post.location}}</small>
+      <small class="text-white"
+             style="position: absolute;top: 22px;font-size: 11px;color: #d2cfcf !important;">{{post.location}}</small>
     </div>
     <div>
-      <img [src]="post.mainImgUrl" alt="" (dblclick)="likePost(i)"
+      <div class="text-center" *ngIf="post.likedImage" style="
+    position: absolute;
+    top: 40%;
+    left: 40%;
+"><i class="text-white fa fa-heart fa-5x imgShadow"></i></div>
+      <img class="img-fluid doubleClick" [src]="post.mainImgUrl" alt="" (dblclick)="likePost(i)"
            style="width: -moz-available;width: -webkit-fill-available">
     </div>
     <div>
