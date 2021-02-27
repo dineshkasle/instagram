@@ -30,6 +30,15 @@ export class PostsComponent implements OnInit {
         likes: 2500,
         likeClass:'fa fa-heart-o ',
         likedImage:false
+      },
+      {
+        imgUri: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-1.jpg",
+        userName: "Danny D'suza",
+        location: 'Delhi, India',
+        mainImgUrl: 'https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-1.jpg',
+        likes: 5000,
+        likeClass:'fa fa-heart-o ',
+        likedImage:false
       }];
   }
 
