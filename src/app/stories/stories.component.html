@@ -8,17 +8,18 @@
     <div class="">
       <div class="cover-container">
         <!-- START PANEL -->
-        <div class="cover-item" style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg');border-radius: 50%;">
+        <div  class="cover-item" style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg');border-radius: 50%;">
+          <i style="position: absolute;top: 31px;left: 37px;" class="fa fa-plus-circle text-primary"></i>
           <small class="iconCss pt-1 ml-1">
             You
           </small>
         </div>
-        <div class="cover-item" style="background-image: url('https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg');border-radius: 50%;">
+        <div data-toggle="modal" data-target="#exampleModal" class="cover-item storyCircle" style="background-image: url('https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg');border-radius: 50%;">
           <small class="iconCss pt-1">
             Demo
           </small>
         </div>
-        <div class="cover-item" style="background-image: url('https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg');border-radius: 50%;">
+        <div data-toggle="modal" data-target="#exampleModalTwo" class="cover-item storyCircle" style="background-image: url('https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg');border-radius: 50%;">
           <small class="iconCss pt-1">
             Demo
           </small>
@@ -64,4 +65,49 @@
   </div>
 
 
+</div>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background-color: black">
+      <div>
+        <button  type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+          <span class="text-white" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="storyFontStyle">
+          First simple <br>
+          rule in life: <br><br>
+          If you don't <br>
+          go after what<br>
+          you want,<br><br>
+          you'll never<br>
+          have it.<br><br>
+        </h2>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"  style="background-image: url('https://i.pinimg.com/originals/2c/30/a7/2c30a7700da8390c32f1f36b17b11967.jpg');background-position: center;
+background-repeat: no-repeat;
+background-size: cover;">
+      <div>
+        <button  type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+          <span class="text-black" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      </div>
+
+    </div>
+  </div>
 </div>

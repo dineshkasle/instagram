@@ -12,4 +12,8 @@ export class StoriesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openStory(){
+    console.log('open')
+  }
+
 }
